@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  if personName
+    h1 Hi #{personName}, welcome to #{title}
+  else
+    h1 Welcome to #{title}
+  form(action="/sayMyName", method="get", autocomplete="on") 
+    label(for="sayMyName") Please enter your name&emsp; 
+    input#sayMyName(type="text", name="myName", placeholder="Type your name here")
